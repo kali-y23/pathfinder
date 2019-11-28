@@ -27,5 +27,6 @@ int main(int argc, char **argv) {
         i++;
     }
 
-    system("leaks pathfinder");
+    mx_release_memory(data);
+    //system("leaks pathfinder");
 }

@@ -1,7 +1,7 @@
 #include "pathfinder.h"
 #include <stdio.h>
 
-static void write_set(char **set, char **names_strarr, int *index) {
+static void write_set(char **set, char **names_strarr, int n, int *index) {
     for (int i = 0; names_strarr[i]; i++) {
         int duplicate = 0;
 
@@ -18,6 +18,10 @@ static void write_set(char **set, char **names_strarr, int *index) {
 
         set[*index] = mx_strdup(names_strarr[i]);
         *index += 1;
+
+        if (*index >= n) {
+            mx_invalid_number_of_isles(n, *index);
+        }
     }
 }
 
@@ -30,12 +34,11 @@ static char **parse_set(char **strarr, int n) {
     for (int i = 1; strarr[i]; i++) {
         int distance = 0;
         char **names_strarr = mx_get_names_strarr(strarr[i], &distance);
-        write_set(set, names_strarr, &index);
+        write_set(set, names_strarr, n, &index);
+        mx_del_strarr(names_strarr);
     }
 
-    // if (index != (n - 1)) {
-    //     mx_invalid_number_of_isles();
-    // }
+    mx_invalid_number_of_isles(index, n);
 
     return set;
 }
@@ -68,6 +71,8 @@ t_data *mx_parsing(char *filename) {
 
     char *file = mx_file_to_str(filename);
     char **strarr = mx_strsplit(file, '\n');
+
+    mx_error_hub(strarr, filename);
 
     data->n = mx_atoi(strarr[0]);
     data->set = parse_set(strarr, data->n);

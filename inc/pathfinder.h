@@ -27,7 +27,9 @@ t_vertex *mx_dijkstra(int **matrix, int root, int n);
 void mx_process_output(int **matrix, char **set, t_vertex **head);
 
 // Error handling
+void mx_error_hub(char **file, char *filename);
 void mx_check_arguments(int argc);
+void mx_invalid_number_of_isles(int given_n, int real_n);
 
 // Utils
     //Vertex lists
@@ -55,7 +57,7 @@ void mx_update_path(t_vertex *vertex, t_vertex *adj_vertex);
 void mx_append_new_min_path(t_vertex *vertex, t_vertex *adj_vertex);
 
     // Misc Memory
-void mx_release_memory(int **matrix, char **set, int n);
+void mx_release_memory(t_data *data);
 void mx_clear_vertex_list(t_vertex **list);
 
     // Misc Output
