@@ -26,6 +26,9 @@ t_data *mx_parsing(char *filename);
 t_vertex *mx_dijkstra(int **matrix, int root, int n);
 void mx_process_output(int **matrix, char **set, t_vertex **head);
 
+// Error handling
+void mx_check_arguments(int argc);
+
 // Utils
     //Vertex lists
 t_vertex *mx_create_vertex(int index, int distance, char *path);

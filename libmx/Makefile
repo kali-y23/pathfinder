@@ -29,6 +29,8 @@ mx_nbr_to_hex.c \
 mx_pop_back.c \
 mx_pop_front.c \
 mx_pow.c \
+mx_print_arr.c \
+mx_print_matrix.c \
 mx_print_strarr.c \
 mx_print_unicode.c \
 mx_printchar.c \
@@ -96,6 +98,8 @@ src/mx_nbr_to_hex.c \
 src/mx_pop_back.c \
 src/mx_pop_front.c \
 src/mx_pow.c \
+src/mx_print_arr.c \
+src/mx_print_matrix.c \
 src/mx_print_strarr.c \
 src/mx_print_unicode.c \
 src/mx_printchar.c \
@@ -162,6 +166,8 @@ mx_nbr_to_hex.o \
 mx_pop_back.o \
 mx_pop_front.o \
 mx_pow.o \
+mx_print_arr.o \
+mx_print_matrix.o \
 mx_print_strarr.o \
 mx_print_unicode.o \
 mx_printchar.o \

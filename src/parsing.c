@@ -33,6 +33,10 @@ static char **parse_set(char **strarr, int n) {
         write_set(set, names_strarr, &index);
     }
 
+    // if (index != (n - 1)) {
+    //     mx_invalid_number_of_isles();
+    // }
+
     return set;
 }
 

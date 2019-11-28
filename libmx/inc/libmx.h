@@ -12,15 +12,18 @@ typedef struct  s_list {
     void  *data;
     struct s_list *next;
 }         t_list;
- 
+
 
 // Utils pack
 void  mx_printchar(char c);
 void mx_print_unicode(wchar_t c);
 void mx_printstr(const char *s);
+void mx_print_error(const char *s);
 void mx_printstrn(char *str, int n);
 void mx_print_strarr(char **arr, const char *delim);
 void mx_printint(int n);
+void mx_print_matrix(int **matrix, int n);
+void mx_print_arr(int *arr, int n, char *delim);
 double mx_pow(double n, unsigned int pow);
 int mx_sqrt(int x);
 char *mx_nbr_to_hex(unsigned long nbr);

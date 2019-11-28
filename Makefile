@@ -3,6 +3,7 @@ CPSRC = \
 inc/pathfinder.h \
 libmx/inc/libmx.h \
 src/main.c \
+src/errors.c \
 src/parsing.c \
 src/core.c \
 src/output.c \
@@ -15,6 +16,7 @@ src/utils/mx_misc_output.c \
 
 SRC = \
 main.c \
+errors.c \
 parsing.c \
 core.c \
 output.c \

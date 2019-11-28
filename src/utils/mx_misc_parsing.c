@@ -24,6 +24,7 @@ int **mx_create_matrix(int n) {
     return matrix;
 }
 
+
 char **mx_create_set(int n) {
     char **set = malloc(sizeof(char *) * (n + 1));
 
@@ -34,6 +35,7 @@ char **mx_create_set(int n) {
     return set;
 }
 
+
 int mx_get_str_index(char **strarr, char *str) {
     for (int i = 0; strarr[i]; i++) {
         if (mx_strcmp(strarr[i], str) == 0) {
@@ -42,6 +44,7 @@ int mx_get_str_index(char **strarr, char *str) {
     }
     return -1;
 }
+
 
 char **mx_get_names_strarr(char *str, int *distance) {
     char **isles = mx_strsplit(str, ',');
