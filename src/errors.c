@@ -1,5 +1,18 @@
 #include "pathfinder.h"
 
+static void line_invalid(char **file) {
+    for (int i = 1; file[i]; i++) {
+        char **strarr = mx_strsplit(file[i], ',');
+
+        if (mx_strarr_len(strarr) != 2) {
+            mx_print_line_error(i);
+        }
+
+        mx_validate_names(strarr[0], i);
+        //mx_validate_distance(strarr[1], i);
+    }
+}
+
 static void first_line_invalid(char *line) {
     for (int i = 0; line[i]; i++) {
         if (!mx_isdigit(line[i]) && line[i] != '\n') {
@@ -31,19 +44,5 @@ void mx_error_hub(char **file, char *filename) {
     file_is_empty(file, filename);
     file_does_not_exist(file, filename);
     first_line_invalid(file[0]);
-    // line_invlid(file);
-}
-
-void mx_invalid_number_of_isles(int given_n, int real_n) {
-    if (given_n != real_n) {
-        mx_print_error("error: invalid number of islands\n");
-        exit(-1);
-    }
-}
-
-void mx_check_arguments(int argc) {
-    if (argc != 2) {
-        mx_print_error("usage: ./pathfinder [filename]\n");
-        exit(-1);
-    }
+    line_invalid(file);
 }

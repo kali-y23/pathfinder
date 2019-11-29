@@ -30,6 +30,7 @@ char *mx_nbr_to_hex(unsigned long nbr);
 unsigned long mx_hex_to_nbr(const char *hex);
 char *mx_itoa(int number);
 int mx_atoi(const char *str);
+bool mx_isalpha(int c);
 bool mx_isspace(char c);
 bool mx_isdigit(int c);
 int mx_random_int(int min, int max);

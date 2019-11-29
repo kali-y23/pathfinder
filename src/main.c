@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
     int i = 0;
     while (i < data->n - 1) {
         t_vertex *output = mx_dijkstra(data->matrix, i, data->n);
-        mx_process_output(data->matrix, data->set, &output);
+        // mx_process_output(data->matrix, data->set, &output);
         // print_list(output); - memory leak hint here
         mx_clear_vertex_list(&output);
         i++;

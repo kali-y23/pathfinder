@@ -22,14 +22,11 @@ typedef struct s_vertex {
 // DONT PUSH DELETE
 void print_list(t_vertex *list);
 
+void mx_error_hub(char **file, char *filename);
 t_data *mx_parsing(char *filename);
 t_vertex *mx_dijkstra(int **matrix, int root, int n);
 void mx_process_output(int **matrix, char **set, t_vertex **head);
 
-// Error handling
-void mx_error_hub(char **file, char *filename);
-void mx_check_arguments(int argc);
-void mx_invalid_number_of_isles(int given_n, int real_n);
 
 // Utils
     //Vertex lists
@@ -65,5 +62,10 @@ int *mx_parse_path(char *path);
 void mx_print_line();
 void mx_unpack_multiples(t_vertex **visited, t_vertex *vertex);
 
+    // Misc Errors
+void mx_validate_names(char *names, int line);
+void mx_check_arguments(int argc);
+void mx_invalid_number_of_isles(int given_n, int real_n);
+void mx_print_line_error(int i);
 
 #endif

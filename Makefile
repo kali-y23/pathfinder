@@ -9,6 +9,7 @@ src/core.c \
 src/output.c \
 src/utils/mx_byindex.c \
 src/utils/mx_vertex_lists.c \
+src/utils/mx_misc_errors.c \
 src/utils/mx_misc_parsing.c \
 src/utils/mx_misc_core.c \
 src/utils/mx_misc_memory.c \
@@ -22,6 +23,7 @@ core.c \
 output.c \
 mx_byindex.c \
 mx_vertex_lists.c \
+mx_misc_errors.c \
 mx_misc_parsing.c  \
 mx_misc_core.c \
 mx_misc_memory.c \
