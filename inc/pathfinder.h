@@ -64,8 +64,10 @@ void mx_unpack_multiples(t_vertex **visited, t_vertex *vertex);
 
     // Misc Errors
 void mx_validate_names(char *names, int line);
+void mx_validate_distance(char *distance_str, int line);
 void mx_check_arguments(int argc);
 void mx_invalid_number_of_isles(int given_n, int real_n);
 void mx_print_line_error(int i);
+void mx_empty_line(char **strarr, char *file);
 
 #endif

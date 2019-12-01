@@ -5,10 +5,10 @@ char *mx_file_to_str(const char *file) {
     int chars_read;
     char buf[64];
     char *result = malloc(1);
-    char *temp = malloc(1);
+    char *temp = NULL;
 
     if (fd == -1) {
-        return "-1";
+        return mx_strdup("-1");
     }
 
     while ((chars_read = read(fd, buf, sizeof(buf))) != 0) {

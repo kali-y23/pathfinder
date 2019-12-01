@@ -63,13 +63,14 @@ void mx_process_output(int **matrix, char **set, t_vertex **head) {
     }
     
     int source = vertex->index;
+    mx_sort_byindex(head);
 
     mx_unpack_multiples(head, vertex);
     vertex = vertex->next;
-    mx_sort_byindex(&vertex);
+    
 
     while (vertex) {
-        if (vertex-> index > source) {
+        if (vertex->index > source) {
             print_output(matrix, set, vertex, source);
         }
         vertex = vertex->next;

@@ -1,4 +1,4 @@
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic -o pathfinder
+CFLAGS = -std=c11 -Wall -Wextra -Wpedantic -o pathfinder
 CPSRC = \
 inc/pathfinder.h \
 libmx/inc/libmx.h \

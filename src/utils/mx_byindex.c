@@ -56,6 +56,10 @@ static int cmp_path(char *left, char *right) {
 			return 0;
 		}
 	}
+
+	free(left_path);
+	free(right_path);
+	
 	return 0;
 }
 

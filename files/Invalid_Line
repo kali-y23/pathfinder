@@ -1,11 +1,10 @@
 7
-Home-Home,4
-BusStop-Work,7
-Home-,1
-Metro-H8ome,6
+-Home,4
+BusStop--Work,7
+Ho*me-Taxi,1
 Taxi-Work,10
 Work-Gym,2
-Metro-Work,8
-Taxi--Gym,12
+Metro-Metro,8
+Taxi-Gym,12
 BusStop-Park,18
 Park-Metro,16

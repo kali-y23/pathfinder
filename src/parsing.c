@@ -1,5 +1,4 @@
 #include "pathfinder.h"
-#include <stdio.h>
 
 static void write_set(char **set, char **names_strarr, int n, int *index) {
     for (int i = 0; names_strarr[i]; i++) {
@@ -72,6 +71,7 @@ t_data *mx_parsing(char *filename) {
     char *file = mx_file_to_str(filename);
     char **strarr = mx_strsplit(file, '\n');
 
+    mx_empty_line(strarr, file);
     mx_error_hub(strarr, filename);
 
     data->n = mx_atoi(strarr[0]);

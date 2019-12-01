@@ -77,5 +77,9 @@ t_vertex *mx_dijkstra(int **matrix, int root, int n) {
         root = calc_index(unvisited);
     }
 
+    if (unvisited) {
+        mx_clear_vertex_list(&unvisited);
+    }
+
     return visited;
 }

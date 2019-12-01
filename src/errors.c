@@ -9,13 +9,15 @@ static void line_invalid(char **file) {
         }
 
         mx_validate_names(strarr[0], i);
-        //mx_validate_distance(strarr[1], i);
+        mx_validate_distance(strarr[1], i);
+
+        mx_del_strarr(strarr);
     }
 }
 
 static void first_line_invalid(char *line) {
     for (int i = 0; line[i]; i++) {
-        if (!mx_isdigit(line[i]) && line[i] != '\n') {
+        if (!mx_isdigit(line[i]) && line[i]) {
             mx_print_error("error: line 1 is not valid\n");
             exit(-1);
         }
