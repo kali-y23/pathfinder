@@ -95,5 +95,5 @@ Java-Fraser,5$
 error: invalid number of islands
 ```
 
-**Installation:** Clone and  ```make```
+**Installation:** Clone and  ```make```. Written ans tested on MacOS Mojave.
 
