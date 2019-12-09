@@ -4,8 +4,8 @@ Pathfinder is a prject I made as a part of a [Ucode](https://unit.ua/en/) study 
 
 ## Description
 
-Pathfinder is a program that finds all shortest paths between al vertices of a graph.
-Based on Dijkstra's algorithm, so negative edge weight is not supported. If there are differents shortest paths between vertices, Pathfinder outputs them all.
+Pathfinder is a program that finds all shortest paths between all vertices of a graph.
+Based on Dijkstra's algorithm, so negative edge weight is not supported. If there are differents shortest paths between two vertices, Pathfinder outputs them all.
 
 Allowed functions:
 ```malloc, malloc_size, free, open, read, write, close, exit```
@@ -13,7 +13,7 @@ Allowed functions:
 Includes the libmx library with various analogues of standard C functions.
 
 **Usage:**
-Requires a file as an input. First line of a file must be a number of vertices, remaining lines contain distances between isles, in the format shown below.
+Requires a file as an input. First line of a file must be the number of vertices, remaining lines contain distances between vertices, in the format shown below.
 
 ```bash
 cat -e example.txt
@@ -95,7 +95,5 @@ Java-Fraser,5$
 error: invalid number of islands
 ```
 
-## Installation
-
-Clone and  ```make```
+**Installation:** Clone and  ```make```
 
