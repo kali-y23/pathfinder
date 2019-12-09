@@ -60,14 +60,14 @@ usage: ./pathfinder [filename]
 
 cat -e islands
 cat: islands: No such file or directory
->./pathfinder islands | cat -e
+./pathfinder islands | cat -e
 error: file islands does not exist
 
 cat -e empty
 ./pathfinder empty | cat -e
 error: file empty is empty
 
->cat -e invalid1
+cat -e invalid1
 4f$
 Greenland-Bananal,8$
 Fraser-Greenland,10$
@@ -76,7 +76,7 @@ Java-Fraser,5$
 ./pathfinder invalid1 | cat -e
 error: line 1 is not valid
 
->cat -e invalid2
+cat -e invalid2
 4$
 Greenland-Bananal,8$
 Fraser--Greenland,10$  # invalid line 3
